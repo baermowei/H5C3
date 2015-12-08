@@ -1,0 +1,10 @@
+@font-face {
+font-family: 'huxiaobo-meixin577684';
+src: url('huxiaobo-meixin.eot');
+src: url('huxiaobo-meixin.eot?#iefix') format('embedded-opentype'),
+     url('huxiaobo-meixin.woff') format('woff'),
+     url('huxiaobo-meixin.ttf') format('truetype'),
+     url('huxiaobo-meixin.svg#huxiaobo-meixin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }

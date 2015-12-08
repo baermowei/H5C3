@@ -1,0 +1,138 @@
+body{
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    font-family: 'huxiaobo-meixin577684', '微软雅黑';
+}   
+
+@font-face {
+font-family: 'huxiaobo-meixin577684';
+src: url('../fonts/huxiaobo-meixin.eot');
+src: url('../fonts/huxiaobo-meixin.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/huxiaobo-meixin.woff') format('woff'),
+     url('../fonts/huxiaobo-meixin.ttf') format('truetype'),
+     url('../fonts/huxiaobo-meixin.svg#huxiaobo-meixin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
+/*"font-family: 'Kaushan Script', cursive; font-family: 'Rock Salt', cursive;"*/
+body,html{
+    height: 100%;
+    width: 100%;
+
+}
+div.st_container{
+    width:100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    position: absolute;
+    }
+.st_container a ,.st_container input{
+    width: 20%;
+    height: 38px;
+    line-height: 38px;
+    position: fixed;
+    bottom: 0;
+
+}
+.st_container>input{
+    opacity: 0;
+    z-index: 1000;
+
+}
+
+.st_container>a{
+    z-index: 10;
+    background:#eee;
+   /* background-image: linear-gradient(to top ,#999 30%,#eee 100%);*/
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Rock Salt', cursive;
+    
+}
+
+#radio_1,#radio_1+a{
+    left: 0;
+}
+#radio_2,#radio_2+a{
+     left: 20%;
+ }
+#radio_3,#radio_3+a{
+       left: 40%;
+   }
+#radio_4,#radio_4+a{
+    left: 60%;
+}
+#radio_5,#radio_5+a{
+    left: 80%;
+}
+.st_container>input:checked+a{
+    background: rgba(0,0,0,0.8);
+    color: #eee;
+}
+
+input:checked+a:before{
+    content: "";
+    width: 10px;
+    /*height: 20px;*/
+    overflow: hidden;
+    position: absolute;
+    bottom: 100%;
+    border: 20px solid transparent;
+    border-bottom-color:#333;
+}
+
+/*滑动效果*/
+.st_container input:hover +a{
+    background: rgba(0,0,0,0.1);
+    color: rgba(255,0,0,0.6);
+}
+
+/*让当前的不改变*/
+.st_container input:checked:hover +a{
+    background: rgba(0,0,0,0.8);
+    color: #eee;
+}
+
+
+/*内容部分*/
+
+.scroll,.panel{
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+
+}
+.scroll{
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: all 0.8s ease-out ;
+}
+
+section.panel{
+    overflow: hidden;
+}
+
+
+/*如何找到导航*/
+
+#radio_2:checked ~ .scroll{
+    transform: translateY(-100%);
+}
+#radio_1:checked ~ .scroll{
+    transform: translateY(0);
+}
+#radio_3:checked ~ .scroll{
+    transform: translateY(-200%);
+}
+#radio_4:checked ~ .scroll{
+    transform: translateY(-300%);
+}
+#radio_5:checked ~ .scroll{
+    transform: translateY(-400%);
+}
