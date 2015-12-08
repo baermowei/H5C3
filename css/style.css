@@ -147,9 +147,9 @@ section.panel{
 
 /*********************************单页一的内容*/
 .demo,.img,.info,.border,.mask{
-            width: 280px;
-            height: 280px;
-    
+            width: 250px;
+            height: 250px;
+            left: 10px;
             border-radius: 50%;
            position:absolute;
             top: 5%;
@@ -193,9 +193,9 @@ section.panel{
 
         .border{
             box-sizing:border-box;
-            border: 12px solid #000 ;
-            border-left-color: #eee;
-            border-top-color: #eee;
+            border: 12px solid rgba(255,255,255,0.6) ;
+            border-left-color: rgba(0,0,0,.9);
+            border-top-color: rgba(0,0,0,.9);
             -webkit-transition: all 1s ease;
             -o-transition: all 1s ease;
             transition: all 1s ease;
@@ -203,10 +203,123 @@ section.panel{
         }
 
         a.demo:hover .mask{
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.3);
             color: #fff;
         }
 
         a.demo:hover .border{
             transform: rotate(0.5turn);
         }
+/********************翻页效果的制作************/
+div.information{
+    background: rgba(255,255,255,0.3);
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    left: 10px;
+    margin-left: 12px;
+    bottom: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+ div.information:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right:0;
+        border: 0 solid #ddd;
+        border-color: rgba(0,0,0,0.2) #333;
+        border-radius: 0 0 0 20px;
+        box-shadow: 2px 1px #444;
+        -webkit-transition: all 0.6s ease-out;
+        -o-transition: all 0.6s ease-out;
+        transition: all 0.6s ease-out;
+
+    }
+
+div.information:hover:before{
+        border-bottom-width: 60px;
+        border-right-width: 60px;
+    }
+
+/**************这是中间的的旋转内容***********/
+ section.main{
+    /*background:green;*/
+    height:400px;
+    width:700px;
+    position: absolute;
+    left: 350px;
+    top: 130px;
+    background: rgba(0,0,0,0.9);
+    border-radius:2px 0 10px 0px;
+ } 
+
+div.main_rotate{
+    width: 100%;
+    height :100%;
+    background:#eee;
+    position: absolute;
+    transform-origin: -100% center;
+    border-radius:2px 0 10px 0px;
+ }
+   
+.main div.No_two{
+    z-index: 3;
+    background: #888;
+    -webkit-animation: main_rotate 10s ease-in 0s  infinite;
+    -o-animation: main_rotate 10s ease-in 0s infinite  ;
+    animation: main_rotate 10s ease-in 0s infinite;
+    border-radius:2px 0 40px 0px;
+}
+.main div.No_one{
+    z-index: 4;
+    background: #bbb;
+    -webkit-animation: main_rotate 10s ease-in 5s infinite ;
+    -o-animation: main_rotate 10s ease-in 5s  infinite  ;
+    animation: main_rotate 10s ease-in 5s infinite  ;
+    border-radius:2px 0 25px 0px;
+}
+
+
+
+ @keyframes main_rotate{
+        0%{
+    
+                opacity: 1;
+                filter: alpha(opacity=100);
+        }
+        50%{
+             -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            opacity: 1;
+                filter: alpha(opacity=100);
+        }
+         70%{
+             -webkit-transform: rotate(7deg);
+                -ms-transform: rotate(7deg);
+                -o-transform: rotate(7deg);
+                transform: rotate(6deg);
+                 opacity: 0;
+                filter: alpha(opacity=0);
+        }
+
+        to{
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(1turn);
+                opacity: 0.2;
+                filter: alpha(opacity=20);
+                -webkit-animation-delay: 20s;
+                -o-animation-delay: 20s;
+                animation-delay: 20s;
+                 z-index: -1;
+               
+        }
+ }
+
+
+ /************************************/
