@@ -262,22 +262,23 @@ div.main_rotate{
     position: absolute;
     transform-origin: -100% center;
     border-radius:2px 0 10px 0px;
+    box-shadow: -5px  0 3px #eee;
  }
    
 .main div.No_two{
     z-index: 3;
     background: #888;
-    -webkit-animation: main_rotate 10s ease-in 0s  infinite;
-    -o-animation: main_rotate 10s ease-in 0s infinite  ;
-    animation: main_rotate 10s ease-in 0s infinite;
+    -webkit-animation: main_rotate 12s ease-in 0s  infinite;
+    -o-animation: main_rotate 12s ease-in 0s infinite  ;
+    animation: main_rotate 12s ease-in 0s infinite;
     border-radius:2px 0 40px 0px;
 }
 .main div.No_one{
     z-index: 4;
     background: #bbb;
-    -webkit-animation: main_rotate 10s ease-in 5s infinite ;
-    -o-animation: main_rotate 10s ease-in 5s  infinite  ;
-    animation: main_rotate 10s ease-in 5s infinite  ;
+    -webkit-animation: main_rotate 12s ease-in 6s infinite ;
+    -o-animation: main_rotate 12s ease-in 6s  infinite  ;
+    animation: main_rotate 12s ease-in 6s infinite  ;
     border-radius:2px 0 25px 0px;
 }
 
