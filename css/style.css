@@ -2,6 +2,7 @@ body{
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
     font-family: 'huxiaobo-meixin577684', '微软雅黑';
+    
 }   
 
 @font-face {
@@ -74,14 +75,12 @@ div.st_container{
 input:checked+a:before{
     content: "";
     width: 10px;
-    /*height: 20px;*/
     overflow: hidden;
     position: absolute;
     bottom: 100%;
     border: 20px solid transparent;
     border-bottom-color:#333;
 }
-
 /*滑动效果*/
 .st_container input:hover +a{
     background: rgba(0,0,0,0.1);
@@ -111,7 +110,7 @@ input:checked+a:before{
     -ms-transform: translate3d(0,0,0);
     -o-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    transition: all 0.8s ease-out ;
+    transition: all 0.6s ease-in-out ;
 }
 
 section.panel{
@@ -136,3 +135,78 @@ section.panel{
 #radio_5:checked ~ .scroll{
     transform: translateY(-400%);
 }
+
+    div>section.panel:nth-child(even){
+        background-image: linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1))
+           
+    }
+    section.panel:nth-child(odd){
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.47),rgba(0,0,0,0.1))
+    }
+/*    background-image: linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.9),rgba(0,0,0,0.4))*/
+
+/*********************************单页一的内容*/
+.demo,.img,.info,.border,.mask{
+            width: 280px;
+            height: 280px;
+    
+            border-radius: 50%;
+           position:absolute;
+            top: 5%;
+            display: block;
+
+        }
+
+        .demo{
+            position: relative;
+            display: block;
+            top: 5%;
+        }
+    
+        .img{
+            background-image: url(../imges/myself.jpg);
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        .mask{
+            text-align: center;
+            color: transparent;
+        }
+
+        .mask>.info{
+            
+            margin-top: 50%;
+            transform: translateY(-20%);
+            -webkit-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+           
+            .mask>.info>h2{
+                font-size: 23px;
+            }
+        .mask>.info>p{
+            font-size: 17px;
+        }
+
+        .border{
+            box-sizing:border-box;
+            border: 12px solid #000 ;
+            border-left-color: #eee;
+            border-top-color: #eee;
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+
+        }
+
+        a.demo:hover .mask{
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+        }
+
+        a.demo:hover .border{
+            transform: rotate(0.5turn);
+        }
