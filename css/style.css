@@ -213,7 +213,7 @@ section.panel{
 /********************翻页效果的制作************/
 div.information{
     background: rgba(255,255,255,0.3);
-    height: 300px;
+    height: 46%;
     width: 250px;
     position: absolute;
     left: 10px;
@@ -246,11 +246,11 @@ div.information:hover:before{
 /**************这是中间的的旋转内容***********/
  section.main{
     /*background:green;*/
-    height:400px;
-    width:700px;
+    height:480px;
+    width:760px;
     position: absolute;
-    left: 350px;
-    top: 130px;
+    left: 300px;
+    top: 100px;
     background: rgba(0,0,0,0.9);
     border-radius:2px 0 10px 0px;
  } 
@@ -284,7 +284,7 @@ div.main_rotate{
 
 
 
- @keyframes main_rotate{
+/* @keyframes main_rotate{
         0%{
     
                 opacity: 1;
@@ -320,7 +320,28 @@ div.main_rotate{
                  z-index: -1;
                
         }
- }
+ }*/
 
 
  /************************************/
+
+
+ .aside_r{
+    position: absolute;
+    top: 30px;
+    right: 4px;
+    height: 70%;
+    width:300px;
+    background: #222;
+ }
+
+
+ div.up_div{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 0 1px #000 inset;
+    transform: rotate(-15deg) translateY(-160px);
+
+ }
