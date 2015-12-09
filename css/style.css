@@ -28,7 +28,7 @@ div.st_container{
     top:0;
     position: absolute;
     }
-.st_container a ,.st_container input{
+.st_container>a ,.st_container input{
     width: 20%;
     height: 38px;
     line-height: 38px;
@@ -160,7 +160,7 @@ section.panel{
         .demo{
             position: relative;
             display: block;
-            top: 5%;
+            top: 3%;
         }
     
         .img{
@@ -243,6 +243,36 @@ div.information:hover:before{
         border-right-width: 60px;
     }
 
+
+div#info_div h2{
+    font-size: 16px;
+    text-align: center;
+}
+div#info_div h2:first-child{
+    padding: 5px 0;
+    color: green;
+    font-size : 19px;
+}
+div#info_div a{
+    font-size: 15px;
+        color: rgba(255,0,0,0.5);;
+}
+div#info_div a:hover{
+    color:#058;
+    font-size: 18px;
+}
+
+div.aaaaa{
+    text-align: center;
+}
+/*section.spanGroup{
+padding-left: 20px;
+}*/
+section.spanGroup span{
+
+    padding-left: 20px;
+    color: #058;
+}
 /**************这是中间的的旋转内容***********/
  section.main{
     /*background:green;*/
@@ -324,24 +354,67 @@ div.main_rotate{
 
 
  /************************************/
+div.up_div{
+    width: 400px;
+    height: 100px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 0 9px #000 ;
+    transform: rotate(-15deg) translateY(-65px);
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 20;
 
+ }
+div.up_div>i{
+    display: inline-block;
+    padding: 50px;
+   font-size: 70px;
+   padding-top: 30px;
+   color: #999;
+   text-shadow: 3px 3px #333;
+}
 
  .aside_r{
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 4px;
     height: 70%;
     width:300px;
-    background: #222;
+
+ }
+div#aside_bar{
+    padding: 50px;
+}
+div#aside_bar span{
+    font-size: 40px;
+    margin: 30px;
+    -webkit-animation: span_scale 3s ease 0s infinite alternate;
+    -o-animation: span_scale 3s ease 0s infinite alternate ;
+    animation: span_scale 3s ease 0s infinite alternate ;
+  
+}
+
+@keyframes span_scale{
+    to{
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        transform: scale(1.5) rotate(15deg);
+    }
+}
+ i.aside_icon{
+   font-size: 80px;
+   opacity: 0.8;
+   filter: alpha(opacity=0.8);
  }
 
 
- div.up_div{
-    width: 400px;
-    height: 200px;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.4);
-    box-shadow: 0 0 1px #000 inset;
-    transform: rotate(-15deg) translateY(-160px);
-
+ .icon-html5:before{   
+    display: inline-block;
+    width: 80px;
+    transform: rotate(30deg);
+    color: red;
+ }
+ .icon-css3:before{
+    color: green;
  }
