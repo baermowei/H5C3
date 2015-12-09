@@ -276,7 +276,7 @@ section.spanGroup span{
 /**************这是中间的的旋转内容***********/
  section.main{
     /*background:green;*/
-    height:480px;
+    height:68%;
     width:760px;
     position: absolute;
     left: 300px;
@@ -284,6 +284,7 @@ section.spanGroup span{
     background: rgba(0,0,0,0.9);
     border-radius:2px 0 10px 0px;
  } 
+
 
 div.main_rotate{
     width: 100%;
@@ -296,7 +297,7 @@ div.main_rotate{
  }
    
 .main div.No_two{
-    z-index: 3;
+    z-index: 1;
     background: #888;
     -webkit-animation: main_rotate 12s ease-in 0s  infinite;
     -o-animation: main_rotate 12s ease-in 0s infinite  ;
@@ -304,7 +305,7 @@ div.main_rotate{
     border-radius:2px 0 40px 0px;
 }
 .main div.No_one{
-    z-index: 4;
+    z-index: 2;
     background: #bbb;
     -webkit-animation: main_rotate 12s ease-in 6s infinite ;
     -o-animation: main_rotate 12s ease-in 6s  infinite  ;
@@ -314,43 +315,7 @@ div.main_rotate{
 
 
 
-/* @keyframes main_rotate{
-        0%{
-    
-                opacity: 1;
-                filter: alpha(opacity=100);
-        }
-        50%{
-             -webkit-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            opacity: 1;
-                filter: alpha(opacity=100);
-        }
-         70%{
-             -webkit-transform: rotate(7deg);
-                -ms-transform: rotate(7deg);
-                -o-transform: rotate(7deg);
-                transform: rotate(6deg);
-                 opacity: 0;
-                filter: alpha(opacity=0);
-        }
 
-        to{
-                -webkit-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(1turn);
-                opacity: 0.2;
-                filter: alpha(opacity=20);
-                -webkit-animation-delay: 20s;
-                -o-animation-delay: 20s;
-                animation-delay: 20s;
-                 z-index: -1;
-               
-        }
- }*/
 
 
  /************************************/
@@ -418,3 +383,102 @@ div#aside_bar span{
  .icon-css3:before{
     color: green;
  }
+
+
+ /*第二页的/////////////////////////////////////////////////////////////////////////////////////////*/
+ #icon_container{
+    width: 90%;
+    height: 90%;
+    margin:28px;
+    /*padding: 40px ;*/
+    top: 30px;
+    bottom: 30px;
+    position: relative;
+ }
+
+ #icon_container li{ 
+    display: inline-block;
+ }
+
+
+.icon_ul1,.icon_ul2{
+    width: 100%;
+    height: 30%;
+    padding-left: 5%;
+    margin-bottom: 30px;
+  }
+  .icon_ul3{
+    display: block;
+    width: 100%;
+    height: 20%;
+    padding-left: 5%;
+    background: #eee;
+  }
+    .icon_ul3>li{
+     margin:30px auto;
+     color: rgba(255,1,1,0.7);
+     padding-left: 80px;
+     font-size: 26px;
+    }
+
+  #icon_container .icon_ul1 li,.icon_ul2>li{
+    width: 15%;
+    height: 100%;
+  }
+#unqli{
+    width: 60%;  
+}
+
+
+  #icon_container i:before{
+    text-align: center;
+    font-size:80px;
+    margin-top:50px;
+    display: block;
+    color: rgba(0,0,19,0.4);
+    cursor: pointer;
+  }
+/*#li4{
+    margin: 46px;
+    position: absolute;
+}*/
+#li4>li{
+    font-size: 180px;
+    text-align: center;
+    width: 25%;
+    height: 40px;
+    background: rgba(255,255,255,0.4);
+    color: #fff;
+}
+
+
+.icon_ul1>li:nth-child(1):hover{
+    animation: shake-hard 2s ease  0s;
+}
+.icon_ul1>li:nth-child(2):hover{
+    animation: shake 2s ease  0s;
+}
+
+.icon_ul1>li:nth-child(3):hover{
+    animation: shake-little 2s ease  0s;
+}
+.icon_ul1>li:nth-child(4):hover{
+    animation: shake-slow 2s ease  0s;
+}
+.icon_ul1>li:nth-child(5):hover{
+    animation: shake-horizontal 2s ease  0s;
+}
+.icon_ul1>li:nth-child(6):hover{
+    animation: shake-vertical 2s ease  0s;
+}
+
+
+.icon_ul2>li:first-child:hover{
+    animation: shake-crazy 2s ease  0s;
+}
+.icon_ul2>li:last-child:hover{
+     animation: shake-chunk 2s ease  0s;
+}
+.icon_ul3{
+    animation: shake-opacity  2s ease  0s infinite;
+}
