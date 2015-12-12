@@ -511,3 +511,68 @@ left: 0;
         width: 100%;
         height: 100%;
     }
+
+/*第五页!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+        #flex_cantainer{
+            height: 250px;
+            width: 100%;
+            margin: 100px auto;
+            display: -webkit-flex;
+            display: flex;
+/*          flex-direction: row;
+            flex-wrap: nowrap;*/
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            }
+
+        .fix_flex{
+            height: 250px;
+            width: 20%;
+                }
+
+    .self_flex{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .self_flex>h2{
+        font-size:190px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #000;
+        text-align: center;
+        transform: translate(-50%,-50%);
+        -webkit-text-stroke:1px #fff;
+        text-stroke:1px #fff;
+        text-shadow: -3px 0 3px #000;
+    }
+
+    .flex_div{
+         width: 0px;
+        height: 100%;
+        border-bottom:5px solid #222;
+    }
+    #flex_div1{
+        -webkit-animation: Flex_move 3s ease 0s infinite alternate ;
+        -o-animation: Flex_move 3s ease 0s infinite alternate ;
+        animation: Flex_move 3s ease 0s infinite alternate ;
+    }
+
+        #flex_div2{
+        -webkit-animation: Flex_move 3s ease -1s infinite alternate ;
+        -o-animation: Flex_move 3s ease -1s infinite alternate ;
+        animation: Flex_move 3s ease -1s infinite alternate ;
+     }
+    #flex_div3{
+        -webkit-animation: Flex_move 3s ease -2s infinite alternate ;
+        -o-animation: Flex_move 3s ease -2s infinite alternate ;
+        animation: Flex_move 3s ease -2s infinite alternate ;
+        }
+
+    @keyframes Flex_move{
+        100%{
+            width: 20%;
+        }
+    }
