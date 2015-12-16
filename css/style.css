@@ -294,6 +294,9 @@ div.main_rotate{
     transform-origin: -100% center;
     border-radius:2px 0 10px 0px;
     box-shadow: -5px  0 3px #eee;
+    text-indent: 40px;
+    font-size: 16px;
+    line-height: 30px;
  }
    
 .main div.No_two{
@@ -303,6 +306,7 @@ div.main_rotate{
     -o-animation: main_rotate 12s ease-in 0s infinite  ;
     animation: main_rotate 12s ease-in 0s infinite;
     border-radius:2px 0 40px 0px;
+     color: #eee;
 }
 .main div.No_one{
     z-index: 2;
@@ -314,8 +318,22 @@ div.main_rotate{
 }
 
 
+.main_rotate h2{
+    font-size: 23px;
+    background: #444;
+    line-height: 40px;
+    margin-bottom: 18px;
 
+}
 
+mark{
+    font-size: 15px;
+    background: #bbb;
+    color: olive;
+    display: inline-block;
+    text-indent: 40px;
+    margin-top: 30px;
+}
 
 
  /************************************/
